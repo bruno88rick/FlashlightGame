@@ -11,6 +11,13 @@
 		B6AE6E272BD430A900D7B5D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AE6E262BD430A900D7B5D0 /* ContentView.swift */; };
 		B6AE6E292BD430AE00D7B5D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AE6E282BD430AE00D7B5D0 /* Assets.xcassets */; };
 		B6AE6E2D2BD430AE00D7B5D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AE6E2C2BD430AE00D7B5D0 /* Preview Assets.xcassets */; };
+		B6AE6E352BD431FB00D7B5D0 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = B6AE6E332BD431FA00D7B5D0 /* correct.wav */; };
+		B6AE6E362BD431FB00D7B5D0 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = B6AE6E342BD431FB00D7B5D0 /* wrong.wav */; };
+		B6AE6E382BD4325C00D7B5D0 /* LightState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AE6E372BD4325C00D7B5D0 /* LightState.swift */; };
+		B6AE6E3A2BD432C800D7B5D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AE6E392BD432C800D7B5D0 /* Game.swift */; };
+		B6AE6E3C2BD4375300D7B5D0 /* PlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AE6E3B2BD4375200D7B5D0 /* PlayingView.swift */; };
+		B6AE6E3E2BD43D6D00D7B5D0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AE6E3D2BD43D6D00D7B5D0 /* MenuView.swift */; };
+		B6AE6E402BD43FEE00D7B5D0 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AE6E3F2BD43FEE00D7B5D0 /* GameOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		B6AE6E282BD430AE00D7B5D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6AE6E2A2BD430AE00D7B5D0 /* Flashlight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Flashlight.entitlements; sourceTree = "<group>"; };
 		B6AE6E2C2BD430AE00D7B5D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B6AE6E332BD431FA00D7B5D0 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		B6AE6E342BD431FB00D7B5D0 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		B6AE6E372BD4325C00D7B5D0 /* LightState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightState.swift; sourceTree = "<group>"; };
+		B6AE6E392BD432C800D7B5D0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B6AE6E3B2BD4375200D7B5D0 /* PlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingView.swift; sourceTree = "<group>"; };
+		B6AE6E3D2BD43D6D00D7B5D0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		B6AE6E3F2BD43FEE00D7B5D0 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				B6AE6E242BD430A900D7B5D0 /* FlashlightApp.swift */,
+				B6AE6E3B2BD4375200D7B5D0 /* PlayingView.swift */,
+				B6AE6E3D2BD43D6D00D7B5D0 /* MenuView.swift */,
+				B6AE6E3F2BD43FEE00D7B5D0 /* GameOverView.swift */,
 				B6AE6E262BD430A900D7B5D0 /* ContentView.swift */,
+				B6AE6E372BD4325C00D7B5D0 /* LightState.swift */,
+				B6AE6E392BD432C800D7B5D0 /* Game.swift */,
+				B6AE6E332BD431FA00D7B5D0 /* correct.wav */,
+				B6AE6E342BD431FB00D7B5D0 /* wrong.wav */,
 				B6AE6E282BD430AE00D7B5D0 /* Assets.xcassets */,
 				B6AE6E2A2BD430AE00D7B5D0 /* Flashlight.entitlements */,
 				B6AE6E2B2BD430AE00D7B5D0 /* Preview Content */,
@@ -129,6 +150,8 @@
 			files = (
 				B6AE6E2D2BD430AE00D7B5D0 /* Preview Assets.xcassets in Resources */,
 				B6AE6E292BD430AE00D7B5D0 /* Assets.xcassets in Resources */,
+				B6AE6E362BD431FB00D7B5D0 /* wrong.wav in Resources */,
+				B6AE6E352BD431FB00D7B5D0 /* correct.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AE6E402BD43FEE00D7B5D0 /* GameOverView.swift in Sources */,
+				B6AE6E382BD4325C00D7B5D0 /* LightState.swift in Sources */,
 				B6AE6E272BD430A900D7B5D0 /* ContentView.swift in Sources */,
+				B6AE6E3C2BD4375300D7B5D0 /* PlayingView.swift in Sources */,
 				B6AE6E252BD430A900D7B5D0 /* FlashlightApp.swift in Sources */,
+				B6AE6E3A2BD432C800D7B5D0 /* Game.swift in Sources */,
+				B6AE6E3E2BD43D6D00D7B5D0 /* MenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +310,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -320,8 +347,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

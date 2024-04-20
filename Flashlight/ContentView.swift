@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(Game.self) var game
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            PlayingView()
+                .disabled(game.state != .playing)
+            
+            if game.state == .menu {
+                MenuView()
+            } else if game.state == .gameOver {
+                GameOverView()
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environment(Game())
 }
