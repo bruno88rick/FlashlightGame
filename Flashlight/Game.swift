@@ -22,8 +22,15 @@ class Game {
     var timeOut = 3.0
     var gameOverTask: Task<Void, Error>?
     
+    var hideLight = 0.75
+    var hideLightTask: Task<Void, Error>?
+    
     var score = 0
     
+    var misdirectionCount = 0
+    
+    let correct = Bundle.main.audioPlayer(for: "correct.wav", volume: 0.25)
+    let wrong = Bundle.main.audioPlayer(for: "wrong.wav", volume: 0.25)
     
     init() {
         let row = Array(repeating: LightState.off, count: colCount)
@@ -42,9 +49,19 @@ class Game {
     func advance() {
         clearBoard()
         
+        for _ in 0..<misdirectionCount {
+            let newRow = Int.random(in: 0..<rowCount)
+            let newCol = Int.random(in: 0..<colCount)
+            rows[newRow][newCol] = .misdirection
+        }
+        
         let correctRow = Int.random(in: 0..<rowCount)
         let correctCol = Int.random(in: 0..<colCount)
         rows[correctRow][correctCol] = .on
+        
+        timeOut *= 0.99
+        hideLight *= 0.98
+        misdirectionCount += 1
         
         gameOverTask?.cancel()
         
@@ -52,12 +69,22 @@ class Game {
             try await Task.sleep(for: .seconds(timeOut))
             state = .gameOver
         }
+        
+        hideLightTask?.cancel()
+        
+        hideLightTask = Task {
+            try await Task.sleep(for: .seconds(hideLight))
+            rows[correctRow][correctCol] = .hidden
+        }
     }
     
     func press(_ row: Int, _ col: Int){
-        if rows[row][col] == .on {
+        if rows[row][col] == .on || rows[row][col] == .hidden {
             score += 1
             advance()
+            correct.play()
+        } else {
+            wrong.play()
         }
     }
     
@@ -67,6 +94,7 @@ class Game {
         score = 0
         timeOut = 3
         state = .playing
+        misdirectionCount = 0
         
         Task {
             try await Task.sleep(for: .seconds(1))
